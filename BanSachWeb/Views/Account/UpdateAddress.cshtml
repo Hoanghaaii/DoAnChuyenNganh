@@ -1,0 +1,87 @@
+﻿@model IEnumerable<BanSachWeb.Models.DiaChi>
+
+@{
+    ViewBag.Title = "Update Address";
+}
+
+<h2>Update Address</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateAddress")
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().MaTaiKhoan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().QuocGia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Tinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Huyen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Xa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().DiaChiCuThe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().MacDinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().SoDienThoaiNhanHang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().TenNguoiNhan)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaTaiKhoan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuocGia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tinh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Huyen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Xa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChiCuThe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MacDinh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoaiNhanHang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+               
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaDiaChi }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaDiaChi }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaDiaChi })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
